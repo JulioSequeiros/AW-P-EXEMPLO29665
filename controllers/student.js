@@ -11,7 +11,7 @@ exports.getById = async (req, res) => {
 exports.create = async (req, res) => {
     const {name, city, age } = req.body;
 
-    return res.send({name, city, age });
+    return res.send(name + city);
 }
 
 exports.update = async (req, res) => {
@@ -22,5 +22,5 @@ exports.update = async (req, res) => {
 
 exports.delete = async (req, res) => {
     const id = req.body.id;
-    return res.send("Apagado");
+    return res.send(id);
 }
